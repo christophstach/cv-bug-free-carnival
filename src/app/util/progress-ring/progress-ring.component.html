@@ -1,0 +1,13 @@
+<div class="clearfix">
+  <div class="progress-radial setsize" [ngClass]="'progress-' + this.percent" #outerElement>
+    <div class="overlay setsize" #innerElement>
+      <div class="content">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="label" class="text-center label">
+  <strong class="p-3 d-block">{{label}}</strong>
+</div>

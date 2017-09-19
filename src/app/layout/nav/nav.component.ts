@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'jquery';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+
+  }
+
+  scrollSmooth(viewSelector: string) {
+    /*
+    $('html').animate({
+      scrollTop: $(viewSelector).offset().top + 56
+    });
+    */
+
+    $('html').animate({
+      scrollTop: $(viewSelector).offset().top
+    });
+
+    window.location.hash = viewSelector;
+
+    return false;
+  }
 }

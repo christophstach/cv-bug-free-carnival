@@ -1,7 +1,7 @@
-/// <reference path="jquery/jquery.d.ts" />
-
 import { AfterViewInit, Component } from '@angular/core';
-import $ from 'jquery';
+import 'jquery';
+import 'bootstrap';
+
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,10 @@ import $ from 'jquery';
 export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
+    /*
     $('[data-spy="scroll"]').each(() => {
-      // const $spy = $(this).scrollspy('refresh');
+      const $spy = $(this).scrollspy('refresh');
     });
+    */
   }
 }

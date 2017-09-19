@@ -1,0 +1,164 @@
+@import "./../../../colors";
+
+$backgroundColor: #FFFFFF;
+$foregroundColor: $color-secondary-1-0;
+
+/* STYLES FOR PROGRESSBARS */
+
+.progress-radial, .progress-radial * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+strong.label {
+  text-transform: uppercase;
+}
+
+.progress-radial {
+  .overlay {
+    display: flex;
+    align-items: center;
+
+
+    .content {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
+
+/* -------------------------------------
+ * Bar container
+ * ------------------------------------- */
+.progress-radial {
+  float: left;
+  position: relative;
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* -------------------------------------
+ * Optional centered circle w/text
+ * ------------------------------------- */
+.progress-radial .overlay {
+  position: absolute;
+  width: 80%;
+  background-color: $backgroundColor;
+  border-radius: 50%;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+/* -------------------------------------
+ * Mixin for progress-% class
+ * ------------------------------------- */
+.progress-0 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(0deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(90deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-5 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(342deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(108deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-10 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(324deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(126deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-15 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(306deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(144deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-20 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(288deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(162deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-25 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-30 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(252deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(198deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-35 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(234deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(216deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-40 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(216deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(234deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-45 {
+  background-image: -webkit-linear-gradient(0deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(198deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $backgroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(252deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-50 {
+  background-image: -webkit-linear-gradient(180deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(-90deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-55 {
+  background-image: -webkit-linear-gradient(162deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(-72deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-60 {
+  background-image: -webkit-linear-gradient(144deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(-54deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-65 {
+  background-image: -webkit-linear-gradient(126deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(-36deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-70 {
+  background-image: -webkit-linear-gradient(108deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(-18deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-75 {
+  background-image: -webkit-linear-gradient(90deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(0deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-80 {
+  background-image: -webkit-linear-gradient(72deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(18deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-85 {
+  background-image: -webkit-linear-gradient(54deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(36deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-90 {
+  background-image: -webkit-linear-gradient(36deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(54deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-95 {
+  background-image: -webkit-linear-gradient(18deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(72deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}
+
+.progress-100 {
+  background-image: -webkit-linear-gradient(0deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), -webkit-linear-gradient(180deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+  background-image: linear-gradient(90deg, $foregroundColor 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0)), linear-gradient(270deg, $foregroundColor 50%, $backgroundColor 50%, $backgroundColor);
+}

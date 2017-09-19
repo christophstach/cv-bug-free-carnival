@@ -1,5 +1,5 @@
 <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Christoph Stach</a>
+  <a class="navbar-brand" href="#home">Christoph Stach</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,22 +7,22 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#top">Home</a>
+        <a class="nav-link" href="#home" (click)="scrollSmooth('#home')">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#skills" (click)="scrollSmooth('#skills')">Skills</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#work-experience">Work Experience</a>
+        <a class="nav-link" href="#work-experience" (click)="scrollSmooth('#work-experience')">Work Experience</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#education" (click)="scrollSmooth('#education')">Education</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#languages">Languages</a>
+        <a class="nav-link" href="#languages" (click)="scrollSmooth('#languages')">Languages</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#find-me">Find me</a>
+        <a class="nav-link" href="#find-me" (click)="scrollSmooth('#find-me')">Find me</a>
       </li>
     </ul>
   </div>

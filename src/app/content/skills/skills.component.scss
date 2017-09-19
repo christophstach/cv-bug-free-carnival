@@ -2,4 +2,23 @@
 
 section {
   min-height: 100vh;
+
+  .wrapper {
+    flex: 1;
+
+    h2 {
+      border-bottom: 1px solid black;
+      text-align: center;
+      // display: none;
+    }
+
+    .skill {
+      text-align: center;
+      padding: 40px 10%;
+
+      img {
+        height: 100px
+      }
+    }
+  }
 }
