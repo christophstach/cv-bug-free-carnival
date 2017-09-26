@@ -38,8 +38,5 @@ export class JqueryCircleProgressComponent implements OnInit {
         }, 500);
       }
     });
-
-
   }
-
 }
