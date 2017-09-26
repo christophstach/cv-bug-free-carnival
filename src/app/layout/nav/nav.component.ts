@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import 'jquery';
 
 @Component({
@@ -7,21 +7,17 @@ import 'jquery';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  @ViewChild('element') element: ElementRef;
 
   constructor() {
   }
 
-  ngOnInit() {
 
+  ngOnInit(): void {
+    $('body').scrollspy();
   }
 
   scrollSmooth(viewSelector: string) {
-    /*
-    $('html').animate({
-      scrollTop: $(viewSelector).offset().top + 56
-    });
-    */
-
     $('html').animate({
       scrollTop: $(viewSelector).offset().top
     });
