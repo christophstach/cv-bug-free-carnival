@@ -1,7 +1,22 @@
 <section class="container-fluid">
-  <div class="d-flex">
-    <div>Left</div>
-    <div>Line</div>
-    <div>Right</div>
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let item of timelineItems">
+      <div class="content">
+        <div class="box">
+          <h3>
+            Frontend Engineer @ DERICON GmbH
+            <small>Dec 2016 - present</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="line-with-dot">
+        <div class="dot">&nbsp;</div>
+        <div class="line">&nbsp;</div>
+      </div>
+
+      <div class="empty">&nbsp;</div>
+    </div>
   </div>
+
 </section>
