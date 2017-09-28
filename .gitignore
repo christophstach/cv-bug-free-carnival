@@ -40,3 +40,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+
+jspm_packages/
+
+/functions/node_modules
+
+## ignore generated JavaScript files
+functions/**/*.js
+functions/**/*.js.map

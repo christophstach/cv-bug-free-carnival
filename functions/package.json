@@ -10,5 +10,13 @@
     "graphql": "^0.11.4",
     "graphql-tools": "^1.2.3"
   },
+  "devDependencies": {
+    "typescript": "^2.3.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "deploy": "tsc && firebase deploy --only functions"
+  },
   "private": true
 }
