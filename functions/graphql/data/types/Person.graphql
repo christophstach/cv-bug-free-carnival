@@ -1,0 +1,9 @@
+type Person {
+  id: ID!
+  firstName: String
+  lastName: String
+  workExperience: [WorkExperience]
+  education: [Education]
+  skills: [Skill]
+  languageSkills: [LanguageSkill]
+}

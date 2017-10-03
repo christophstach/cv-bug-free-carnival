@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "deploy": "npm run build",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "start-graphql": "cd ./functions && tsc ./localServer.ts && node ./localServer.js dev",
+    "deploy": "cd ./functions && tsc && cd .. && firebase deploy"
   },
   "private": true,
   "dependencies": {

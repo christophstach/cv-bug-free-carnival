@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import { graphiqlExpress, graphqlExpress } from 'apollo-server-express';
 import { printSchema } from 'graphql/utilities/schemaPrinter';
 import { schema } from './data/schema';
+import { environment } from '../environment';
 
 
 export const setupServer = () => {
@@ -18,7 +19,7 @@ export const setupServer = () => {
   // /api/graphiql
   server.use(
     '/graphiql',
-    graphiqlExpress({ endpointURL: '/api/graphql' })
+    graphiqlExpress({ endpointURL: environment.development ? '/graphql' : '/api/graphql' })
   );
 
   // /api/schema

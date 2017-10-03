@@ -1,41 +1,19 @@
-import { makeExecutableSchema } from 'graphql-tools';
-import { resolveFunctions } from './resolvers';
+import { addMockFunctionsToSchema, makeExecutableSchema } from 'graphql-tools';
+import { types } from './types';
+import { queries } from './queries';
 
-
-const graphQlschema = `
-type Author {
-  id: Int! # the ! means that every author object _must_ have an id
-  firstName: String
-  lastName: String
-  posts: [Post] # the list of Posts by this author
-}
-
-type Post {
-  id: Int!
-  title: String
-  author: Author
-  votes: Int
-}
-
-# the schema allows the following query:
-type Query {
-  posts: [Post]
-  author(id: Int!): Author
-}
-
-# this schema allows the following mutation:
-type Mutation {
-  upvotePost (
-    postId: Int!
-  ): Post
-}
-`;
-
-
-export const schema = makeExecutableSchema({
-  typeDefs: graphQlschema,
-  resolvers: resolveFunctions
+const executableSchema = makeExecutableSchema({
+  typeDefs: [types, queries]
 });
+
+addMockFunctionsToSchema({
+  schema: executableSchema,
+  mocks: {
+    Date: () => new Date()
+  }
+});
+
+export const schema = executableSchema;
 
 
 

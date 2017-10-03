@@ -1,0 +1,5 @@
+type Skill {
+  id: ID!
+  name: String
+  strength: Float
+}

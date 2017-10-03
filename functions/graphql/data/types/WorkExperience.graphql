@@ -1,0 +1,9 @@
+type WorkExperience {
+  id: ID!
+  employer: String
+  position: String
+  fromDate: Date
+  toDate: Date
+  projects: [Project]
+  tasks: [Task]
+}
