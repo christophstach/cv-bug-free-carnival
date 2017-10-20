@@ -2,18 +2,20 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
-    "@types/es6-promise": "0.0.33",
+    "@types/lodash": "^4.14.77",
     "apollo-server-express": "^1.1.2",
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
-    "firebase-admin": "~5.2.1",
-    "firebase-functions": "^0.6.2",
+    "firebase-admin": "^5.4.1",
+    "firebase-functions": "^0.7.0",
     "graphql": "^0.11.4",
     "graphql-tools": "^1.2.3",
-    "rxjs": "^5.4.3"
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3"
   },
   "devDependencies": {
-    "typescript": "^2.3.4"
+    "typescript": "^2.3.4",
+    "graphql-typescript-definitions": "^0.7.3"
   },
   "scripts": {
     "build": "tsc",

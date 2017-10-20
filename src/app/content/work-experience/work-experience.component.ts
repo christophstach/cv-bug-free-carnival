@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { workExperience } from '../../store/init/work-experience.data';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-work-experience',
@@ -6,31 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experience.component.scss']
 })
 export class WorkExperienceComponent implements OnInit {
-  timelineItems = [
-    {
-      position: 'Frontend Engineer',
-      employer: 'DERICON GmbH'
-    },
-    {
-      position: 'Frontend Engineer',
-      employer: 'DERICON GmbH'
-    },
-    {
-      position: 'Frontend Engineer',
-      employer: 'DERICON GmbH'
-    },
-    {
-      position: 'Frontend Engineer',
-      employer: 'DERICON GmbH'
-    },
-    {
-      position: 'Frontend Engineer',
-      employer: 'DERICON GmbH'
-    }
-  ];
-  constructor() { }
+  timelineItems = workExperience;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+
+  dateFormat(date: Date | string, format: string) {
+    if (date instanceof Date) {
+      return moment(date).format(format);
+    } else {
+      return date;
+    }
   }
 
 }

@@ -1,0 +1,67 @@
+scalar Date
+
+type Education {
+  id: ID!
+  institute: String
+  fromDate: Date
+  toDate: Date
+}
+
+type LanguageSkill {
+  id: ID!
+  name: String
+  strength: LanguageSkillStrength
+}
+
+enum LanguageSkillStrength {
+  ELEMENTARY_PROFICIENCY
+  LIMITED_WORKING_PROFICIENCY
+  PROFESSIONAL_WORKING_PROFICIENCY
+  FULL_PROFESSIONAL_PROFICIENCY
+  NATIVE_OR_BILINGUAL_PROFICIENCY
+}
+
+type Person {
+  id: ID!
+  firstName: String
+  lastName: String
+  workExperience: [WorkExperience]
+  education: [Education]
+  skills: [Skill]
+  languageSkills: [LanguageSkill]
+  projects(topic: String): [Project]
+}
+
+type Project {
+  id: ID!
+  name: String
+  repository: String
+  fromDate: Date
+  toDate: Date
+}
+
+type Query {
+  person(id: ID!): Person
+  allPerson: [Person]
+}
+
+type Skill {
+  id: ID!
+  name: String
+  strength: Float
+}
+
+type Task {
+  id: ID!
+  name: String
+}
+
+type WorkExperience {
+  id: ID!
+  employer: String
+  position: String
+  fromDate: Date
+  toDate: Date
+  projects: [Project]
+  tasks: [Task]
+}

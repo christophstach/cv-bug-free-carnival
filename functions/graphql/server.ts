@@ -4,10 +4,13 @@ import { graphiqlExpress, graphqlExpress } from 'apollo-server-express';
 import { printSchema } from 'graphql/utilities/schemaPrinter';
 import { schema } from './data/schema';
 import { environment } from '../environment';
+import * as fs from 'fs';
 
 
 export const setupServer = () => {
   const server = express();
+
+  fs.writeFileSync(__dirname + '/schema.json', printSchema(schema));
 
   // /api/graphql
   server.use(

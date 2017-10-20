@@ -1,0 +1,17 @@
+<li [ngClass]="{'timeline-inverted': inverted}" #itemElement>
+  <div class="timeline-badge" [ngClass]="[badgeType]">
+    <div class="date">
+      <div class="month">{{dateFormat(date, 'MMM')}}</div>
+      <div class="year">{{dateFormat(date, 'YYYY')}}</div>
+    </div>
+  </div>
+  <div class="timeline-panel">
+    <div class="timeline-heading">
+      <h4 class="timeline-title">{{title}}</h4>
+      <p><small class="text-muted"><i class="fa fa-calendar"></i> {{subTitle}}</small></p>
+    </div>
+    <div class="timeline-body">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</li>

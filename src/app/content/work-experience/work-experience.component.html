@@ -1,22 +1,26 @@
-<section class="container-fluid">
-  <div class="timeline">
-    <div class="timeline-item" *ngFor="let item of timelineItems">
-      <div class="content">
-        <div class="box">
-          <h3>
-            Frontend Engineer @ DERICON GmbH
-            <small>Dec 2016 - present</small>
-          </h3>
-        </div>
-      </div>
+<section>
+  <div class="container">
+    <app-timeline>
+      <app-timeline-item
+        *ngFor="let item of timelineItems; let index = index"
+        [date]="item.startDate"
+        [badgeType]="index === 0 ? 'primary': 'default'"
+        [title]="item.position + ' @ ' + item.employer"
+        [subTitle]="dateFormat(item.startDate, 'MMMM YYYY') + ' - '  + dateFormat(item.endDate, 'MMMM YYYY') + ', ' + item.location"
+        [inverted]="index % 2 !== 0">
+        <ul>
+          <li *ngFor="let responsibility of item.responsibilities">{{responsibility}}</li>
+        </ul>
 
-      <div class="line-with-dot">
-        <div class="dot">&nbsp;</div>
-        <div class="line">&nbsp;</div>
-      </div>
+        <ng-container *ngIf="item.technologies.length > 0">
+          <hr>
 
-      <div class="empty">&nbsp;</div>
-    </div>
+          <ng-container *ngFor="let technology of item.technologies">
+            <span class="badge badge-secondary">{{technology}}</span>
+          </ng-container>
+        </ng-container>
+      </app-timeline-item>
+    </app-timeline>
   </div>
 
 </section>

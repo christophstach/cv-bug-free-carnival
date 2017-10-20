@@ -14,13 +14,20 @@ export class NavComponent implements OnInit {
 
 
   ngOnInit(): void {
-    $('body').scrollspy();
+    $('body').scrollspy({ offset: 56 });
   }
 
   scrollSmooth(viewSelector: string) {
-    $('html').animate({
-      scrollTop: $(viewSelector).offset().top
-    });
+    if (viewSelector === '#home') {
+      $('html').animate({
+        scrollTop: $(viewSelector).offset().top
+      });
+    } else {
+      $('html').animate({
+        scrollTop: $(viewSelector).offset().top - 56
+      });
+    }
+
 
     window.location.hash = viewSelector;
 

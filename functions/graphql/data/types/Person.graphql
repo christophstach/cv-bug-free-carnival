@@ -6,4 +6,5 @@ type Person {
   education: [Education]
   skills: [Skill]
   languageSkills: [LanguageSkill]
+  projects(topic:String): [Project]
 }

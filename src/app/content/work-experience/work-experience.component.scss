@@ -1,87 +1,10 @@
 @import "./../../../colors";
 
-$bgColor: #F7F7F7;
-
 section {
   min-height: 100vh;
-  // background-color: $color-secondary-2-0;
-  background-color: $bgColor;
+  background-color: #F9F9F9;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .timeline {
-    width: 100%;
-
-    .timeline-item {
-      display: flex;
-
-      justify-content: center;
-      align-content: center;
-
-      &:nth-child(odd) {
-        flex-direction: row;
-      }
-
-      &:nth-child(even) {
-        flex-direction: row-reverse;
-      }
-
-      &:nth-child(1) {
-        .line-with-dot {
-
-          .dot {
-            min-width: 100px;
-            min-height: 100px;
-
-          }
-        }
-      }
-
-      .content {
-        .box {
-          border: 3px solid $color-secondary-2-0;
-          border-radius: 10px;
-
-          margin: 40px;
-          padding: 16px;
-
-          h3 {
-            small {
-              float: right;
-            }
-          }
-        }
-
-        width: 48%;
-      }
-
-      .line-with-dot {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .dot {
-          min-width: 75px;
-          min-height: 75px;
-          border: 8px solid $bgColor;
-          border-radius: 50%;
-          background-color: $color-secondary-2-0;
-
-        }
-
-        .line {
-          background-color: $color-secondary-2-0;
-          width: 6px;
-          height: 100%;
-        }
-      }
-
-      .empty {
-        width: 48%;
-      }
-    }
+  .wrapper {
+    flex: 1;
   }
-
 }
