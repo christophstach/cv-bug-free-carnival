@@ -16,7 +16,6 @@ export class WorkExperienceComponent implements OnInit {
   ngOnInit() {
   }
 
-
   dateFormat(date: Date | string, format: string) {
     if (date instanceof Date) {
       return moment(date).format(format);
@@ -24,5 +23,4 @@ export class WorkExperienceComponent implements OnInit {
       return date;
     }
   }
-
 }

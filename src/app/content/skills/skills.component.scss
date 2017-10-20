@@ -12,6 +12,16 @@
 section {
   min-height: 100vh;
 
+  h2 {
+    border-top: solid 3px #eeeeee;
+    border-bottom: solid 3px #eeeeee;
+    text-align: center;
+    padding: 16px;
+    margin: 0;
+  }
+
+
+
   .wrapper {
     flex: 1;
 
