@@ -1,13 +1,10 @@
 
 li {
-  left: -2000px;
   margin-bottom: 20px;
   position: relative;
-  transition: all 2s;
 }
 
 li.timeline-inverted {
-  left: 2000px;
 }
 
 li:before,

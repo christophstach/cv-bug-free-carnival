@@ -7,6 +7,8 @@ import * as moment from 'moment';
   styleUrls: ['./timeline-item.component.scss']
 })
 export class TimelineItemComponent implements OnInit {
+  private animationClass = 'fadeIn';
+
   @ViewChild('itemElement') itemElement: ElementRef;
   @Input() inverted = false;
   @Input() title = '';
@@ -18,7 +20,6 @@ export class TimelineItemComponent implements OnInit {
   }
 
   ngOnInit() {
-
     let yetActivated = false;
 
     $(window).scroll((event) => {
@@ -26,16 +27,12 @@ export class TimelineItemComponent implements OnInit {
         yetActivated = true;
 
         setTimeout(() => {
-          if (this.inverted) {
-            $(this.itemElement.nativeElement).css('left', 0);
-          } else {
-            $(this.itemElement.nativeElement).css('left', 0);
-          }
-
+          this.itemElement.nativeElement.classList.toggle('animated', true);
+          this.itemElement.nativeElement.classList.toggle(this.animationClass, true);
+          this.itemElement.nativeElement.classList.toggle('will-animate', false);
         }, 500);
       }
     });
-
   }
 
   dateFormat(date: Date, format: string) {

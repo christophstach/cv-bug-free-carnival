@@ -25,12 +25,8 @@ export const workExperience = [
     location: 'mainly in Perth, Australia',
     startDate: new Date(2014, 10),
     endDate: new Date(2015, 12),
-    responsibilities: [
-
-    ],
-    technologies: [
-
-    ]
+    responsibilities: [],
+    technologies: []
   },
   {
     employer: 'SLH GmbH',

@@ -1,23 +1,19 @@
 <section>
-  <h2>Education</h2>
+  <h2>
+    <div class="will-animate" #headline><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</div>
+  </h2>
   <div class="container">
-    <app-timeline>
-      <app-timeline-item
-        *ngFor="let item of timelineItems; let index = index"
-        [date]="item.startDate"
-        [badgeType]="index === 0 ? 'primary': 'default'"
-        [title]="(item.program ? item.program + ' @ ' + item.name : item.name)"
-        [subTitle]="dateFormat(item.startDate, 'MMMM YYYY') + ' - '  + dateFormat(item.endDate, 'MMMM YYYY') + ', ' + item.location"
-        [inverted]="index % 2 !== 0">
-        <!--<ng-container *ngIf="item.technologies.length > 0">
-          <hr>
-
-          <ng-container *ngFor="let technology of item.technologies">
-            <span class="badge badge-secondary">{{technology}}</span>
-          </ng-container>
-        </ng-container>-->
-      </app-timeline-item>
-    </app-timeline>
+    <div class="timeline-wrapper">
+      <app-timeline>
+        <app-timeline-item
+          *ngFor="let item of timelineItems; let index = index"
+          [date]="item.startDate"
+          [badgeType]="index === 0 ? 'primary': 'default'"
+          [title]="(item.program ? item.program + ' @ ' + item.name : item.name)"
+          [subTitle]="dateFormat(item.startDate, 'MMMM YYYY') + ' - '  + dateFormat(item.endDate, 'MMMM YYYY') + ', ' + item.location"
+          [inverted]="index % 2 !== 0">
+        </app-timeline-item>
+      </app-timeline>
+    </div>
   </div>
-
 </section>

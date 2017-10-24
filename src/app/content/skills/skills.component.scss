@@ -1,16 +1,10 @@
 @import "./../../../colors";
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 section {
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
 
   h2 {
     border-top: solid 3px #eeeeee;
@@ -18,25 +12,21 @@ section {
     text-align: center;
     padding: 16px;
     margin: 0;
+    flex-grow: 0;
   }
+  .container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 
+    .skills-wrapper {
+      .skill {
+        text-align: center;
+        padding: 40px 10%;
 
-
-  .wrapper {
-    flex: 1;
-
-    h2 {
-      border-bottom: 1px solid black;
-      text-align: center;
-      // display: none;
-    }
-
-    .skill {
-      text-align: center;
-      padding: 40px 10%;
-
-      img {
-        height: 100px
+        img {
+          height: 100px
+        }
       }
     }
   }
