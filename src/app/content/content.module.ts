@@ -5,12 +5,12 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { EducationComponent } from './education/education.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { FindMeComponent } from './find-me/find-me.component';
-import { UtilModule } from '../util/util.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    UtilModule
+    SharedModule
   ],
   declarations: [
     SkillsComponent,
