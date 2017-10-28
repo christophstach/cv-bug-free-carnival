@@ -4,6 +4,9 @@ import { ProgressRingComponent } from './components/progress-ring/progress-ring.
 import { JqueryCircleProgressComponent } from './components/jquery-circle-progress/jquery-circle-progress.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelineItemComponent } from './components/timeline/timeline-item/timeline-item.component';
+import { ScrollSpyDirective } from './directives/scroll-spy/scroll-spy.directive';
+import { BootstrapCollapsibleNavDirective } from './directives/bootstrap-collapsible-nav/bootstrap-collapsible-nav.directive';
+import { SmoothScrollDirective } from './directives/smooth-scroll/smooth-scroll.directive';
 
 @NgModule({
   imports: [
@@ -13,13 +16,19 @@ import { TimelineItemComponent } from './components/timeline/timeline-item/timel
     ProgressRingComponent,
     JqueryCircleProgressComponent,
     TimelineComponent,
-    TimelineItemComponent
+    TimelineItemComponent,
+    ScrollSpyDirective,
+    BootstrapCollapsibleNavDirective,
+    SmoothScrollDirective
   ],
   exports: [
     ProgressRingComponent,
     JqueryCircleProgressComponent,
     TimelineComponent,
-    TimelineItemComponent
+    TimelineItemComponent,
+    ScrollSpyDirective,
+    BootstrapCollapsibleNavDirective,
+    SmoothScrollDirective
   ]
 })
 export class SharedModule { }
