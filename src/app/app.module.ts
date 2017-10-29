@@ -12,7 +12,7 @@ import { ScrollSpyModule } from 'ngx-scrollspy';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'my-app' }),
     ScrollSpyModule.forRoot(),
     LayoutModule,
     ContentModule,
@@ -21,4 +21,5 @@ import { ScrollSpyModule } from 'ngx-scrollspy';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

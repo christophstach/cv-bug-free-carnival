@@ -9,6 +9,8 @@ import { AfterViewInit, Component } from '@angular/core';
 export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-    window.scroll(0, 1);
+    if (typeof window !== 'undefined') {
+      window.scroll(0, 1);
+    }
   }
 }

@@ -16,6 +16,5 @@ export class GlobalElementDirective implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    console.log('global Element destroyed');
   }
 }
