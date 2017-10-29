@@ -1,10 +1,15 @@
 <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" scrollSpyElement="nav">
   <a class="navbar-brand" href="#home" appSmoothScroll="#">Christoph Stach</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarCollapse"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    (click)="onToggleNavbar($event)">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarCollapse">
+  <div class="collapse navbar-collapse" #collapsibleNavbar>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" [ngClass]="{'active': (homeInViewport$ | async)}">
         <a class="nav-link" href="#home" appSmoothScroll="#">Home</a>

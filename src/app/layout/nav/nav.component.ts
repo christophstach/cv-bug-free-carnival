@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { ScrollSpyService } from 'ngx-scrollspy';
 import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
 import { Observable } from 'rxjs/Observable';
@@ -10,14 +10,17 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements AfterViewInit {
+  @ViewChild('collapsibleNavbar') collapsibleNavbar: ElementRef;
+
   private offset = -57;
+  private isCollapsed = true;
 
   homeInViewport$: Observable<boolean>;
   skillsInViewport$: Observable<boolean>;
   workExperienceInViewport$: Observable<boolean>;
   educationInViewport$: Observable<boolean>;
 
-  constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService) {
+  constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService, private renderer: Renderer2) {
   }
 
 
@@ -38,5 +41,15 @@ export class NavComponent implements AfterViewInit {
       .getObservable('window')
       .map(() => this.globalElementService.isInViewport('education', this.offset));
 
+  }
+
+  onToggleNavbar(event: Event) {
+    if (this.isCollapsed) {
+      this.renderer.removeClass(this.collapsibleNavbar.nativeElement, 'collapse');
+    } else {
+      this.renderer.addClass(this.collapsibleNavbar.nativeElement, 'collapse');
+    }
+
+    this.isCollapsed = !this.isCollapsed;
   }
 }

@@ -15,13 +15,7 @@ export class ProgressRingComponent implements OnInit {
   }
 
 
-  ngOnInit(): void {
-    $(this.outerElement.nativeElement).height($(this.outerElement.nativeElement).width());
-    $(this.innerElement.nativeElement).height($(this.innerElement.nativeElement).width());
+  ngOnInit() {
 
-    $(window).on('resize', () => {
-      $(this.outerElement.nativeElement).height($(this.outerElement.nativeElement).width());
-      $(this.innerElement.nativeElement).height($(this.innerElement.nativeElement).width());
-    });
   }
 }

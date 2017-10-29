@@ -1,6 +1,4 @@
 import { AfterViewInit, Component } from '@angular/core';
-import 'jquery';
-import 'bootstrap';
 
 
 @Component({
