@@ -23,7 +23,6 @@ export class NavComponent implements AfterViewInit {
   constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService, private renderer: Renderer2) {
   }
 
-
   ngAfterViewInit() {
     this.homeInViewport$ = this.scrollSpyService
       .getObservable('window')
@@ -40,7 +39,6 @@ export class NavComponent implements AfterViewInit {
     this.educationInViewport$ = this.scrollSpyService
       .getObservable('window')
       .map(() => this.globalElementService.isInViewport('education', this.offset));
-
   }
 
   onToggleNavbar(event: Event) {
