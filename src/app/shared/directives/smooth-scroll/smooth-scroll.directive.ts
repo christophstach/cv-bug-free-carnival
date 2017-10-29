@@ -5,7 +5,7 @@ import { Directive, HostListener, Input } from '@angular/core';
 })
 export class SmoothScrollDirective {
   @Input('appSmoothScroll') scrollTo: string;
-  @Input('appSmoothScrollOffset') offset = 56;
+  @Input('appSmoothScrollOffset') offset = 55;
 
   @HostListener('click', ['$event'])
   click(event: MouseEvent) {

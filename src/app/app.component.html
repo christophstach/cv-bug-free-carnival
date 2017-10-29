@@ -1,10 +1,23 @@
-<div class="page">
+<div class="page" scrollSpy>
   <app-nav></app-nav>
-  <app-header id="home"></app-header>
 
-  <app-skills id="skills"></app-skills>
-  <app-work-experience id="work-experience"></app-work-experience>
-  <app-education id="education"></app-education>
+  <div appScrollSpyBreakpoint="home">
+    <app-header id="home"></app-header>
+  </div>
+
+  <div appScrollSpyBreakpoint="skills">
+    <app-skills id="skills"></app-skills>
+  </div>
+
+  <div appScrollSpyBreakpoint="work-experience">
+    <app-work-experience id="work-experience"></app-work-experience>
+  </div>
+
+  <div appScrollSpyBreakpoint="education">
+    <app-education id="education"></app-education>
+  </div>
+
+
   <!--
   <app-languages id="languages"></app-languages>
   <app-find-me id="find-me"></app-find-me>

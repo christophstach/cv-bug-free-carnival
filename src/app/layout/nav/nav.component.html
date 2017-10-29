@@ -1,4 +1,4 @@
-<nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" #element>
+<nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" scrollSpyElement="nav">
   <a class="navbar-brand" href="#home" appSmoothScroll="#">Christoph Stach</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -6,16 +6,16 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
+      <li class="nav-item" [ngClass]="{'active': (homeInViewport$ | async)}">
         <a class="nav-link" href="#home" appSmoothScroll="#">Home</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" [ngClass]="{'active': (skillsInViewport$ | async)}">
         <a class="nav-link" href="#skills" appSmoothScroll="#skills">Skills</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" [ngClass]="{'active': (workExperienceInViewport$ | async)}">
         <a class="nav-link" href="#work-experience" appSmoothScroll="#work-experience">Work Experience</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" [ngClass]="{'active': (educationInViewport$ | async)}">
         <a class="nav-link" href="#education" appSmoothScroll="#education">Education</a>
       </li>
       <!--
@@ -29,3 +29,4 @@
     </ul>
   </div>
 </nav>
+
