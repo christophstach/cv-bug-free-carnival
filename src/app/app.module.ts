@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { ContentModule } from './content/content.module';
 import { SharedModule } from './shared/shared.module';
-import { ScrollSpyModule } from 'ngx-scrollspy';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,6 @@ import { ScrollSpyModule } from 'ngx-scrollspy';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
-    ScrollSpyModule.forRoot(),
     LayoutModule,
     ContentModule,
     SharedModule

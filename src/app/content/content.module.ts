@@ -6,12 +6,10 @@ import { EducationComponent } from './education/education.component';
 import { LanguagesComponent } from './languages/languages.component';
 import { FindMeComponent } from './find-me/find-me.component';
 import { SharedModule } from '../shared/shared.module';
-import { ScrollSpyModule } from 'ngx-scrollspy';
 
 @NgModule({
   imports: [
     CommonModule,
-    ScrollSpyModule,
     SharedModule
   ],
   declarations: [

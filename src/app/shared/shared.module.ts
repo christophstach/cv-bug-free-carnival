@@ -7,6 +7,7 @@ import { BootstrapCollapsibleNavDirective } from './directives/bootstrap-collaps
 import { SmoothScrollDirective } from './directives/smooth-scroll/smooth-scroll.directive';
 import { GlobalElementDirective } from './directives/global-element/global-element.directive';
 import { GlobalElementService } from './services/global-element/global-element.service';
+import { ScrollSpyService } from './services/scroll-spy/scroll-spy.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { GlobalElementService } from './services/global-element/global-element.s
     GlobalElementDirective
   ],
   providers: [
-    GlobalElementService
+    GlobalElementService,
+    ScrollSpyService
   ],
   exports: [
     ProgressRingComponent,

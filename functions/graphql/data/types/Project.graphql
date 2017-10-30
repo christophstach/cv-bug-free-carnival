@@ -1,7 +1,0 @@
-type Project {
-  id: ID!
-  name: String
-  repository: String
-  fromDate: Date
-  toDate: Date
-}

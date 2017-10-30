@@ -2,25 +2,32 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
-    "@types/lodash": "^4.14.77",
-    "apollo-server-express": "^1.1.2",
-    "body-parser": "^1.18.2",
-    "express": "^4.15.5",
-    "firebase-admin": "^5.4.1",
+    "firebase-admin": "~5.4.0",
     "firebase-functions": "^0.7.0",
-    "graphql": "^0.11.4",
-    "graphql-tools": "^1.2.3",
+    "@angular/animations": "^4.4.6",
+    "@angular/common": "^4.4.6",
+    "@angular/compiler": "^4.4.6",
+    "@angular/core": "^4.4.6",
+    "@angular/forms": "^4.4.6",
+    "@angular/http": "^4.4.6",
+    "@angular/platform-browser": "^4.4.6",
+    "@angular/platform-browser-dynamic": "^4.4.6",
+    "@angular/platform-server": "^4.4.6",
+    "@angular/router": "^4.4.6",
+    "@nguniversal/module-map-ngfactory-loader": "^1.0.0-beta.3",
+    "@types/lodash": "^4.14.80",
+    "animate.css": "^3.5.2",
+    "bootstrap": "^4.0.0-beta.2",
+    "core-js": "^2.4.1",
+    "font-awesome": "^4.7.0",
+    "immutable": "^3.8.2",
     "lodash": "^4.17.4",
-    "node-fetch": "^1.7.3"
-  },
-  "devDependencies": {
-    "typescript": "^2.3.4",
-    "graphql-typescript-definitions": "^0.7.3"
-  },
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "deploy": "tsc && firebase deploy --only functions"
+    "moment": "^2.19.1",
+    "ngx-scrollspy": "^1.0.0",
+    "rxjs": "^5.5.2",
+    "ts-loader": "^3.1.0",
+    "zone.js": "^0.8.18",
+    "fs": "0.0.1-security"
   },
   "private": true
 }

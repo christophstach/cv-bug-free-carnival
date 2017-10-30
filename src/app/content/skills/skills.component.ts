@@ -3,8 +3,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/delay';
-import { ScrollSpyService } from 'ngx-scrollspy';
 import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
+import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getObservable('window')
+    this.scrollSpyService.getObservable()
       .map(() => this.globalElementService.isInViewport('skills', -57))
       .filter(isInViewport => isInViewport)
       .take(1)

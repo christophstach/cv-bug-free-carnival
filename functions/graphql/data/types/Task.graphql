@@ -1,4 +1,0 @@
-type Task {
-  id: ID!
-  name: String
-}

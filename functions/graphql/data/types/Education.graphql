@@ -1,6 +1,0 @@
-type Education {
-  id: ID!
-  institute: String
-  fromDate: Date
-  toDate: Date
-}

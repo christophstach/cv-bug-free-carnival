@@ -45,8 +45,15 @@ Thumbs.db
 
 jspm_packages/
 
+
+# firebase functions
 /functions/node_modules
+/functions/dist-server
 
 ## ignore generated JavaScript files
 functions/**/*.js
 functions/**/*.js.map
+
+
+
+

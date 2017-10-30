@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { ScrollSpyService } from 'ngx-scrollspy';
 import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
 
 @Component({
   selector: 'app-nav',
@@ -25,19 +25,19 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.homeInViewport$ = this.scrollSpyService
-      .getObservable('window')
+      .getObservable()
       .map(() => this.globalElementService.isInViewport('home', this.offset));
 
     this.skillsInViewport$ = this.scrollSpyService
-      .getObservable('window')
+      .getObservable()
       .map(() => this.globalElementService.isInViewport('skills', this.offset));
 
     this.workExperienceInViewport$ = this.scrollSpyService
-      .getObservable('window')
+      .getObservable()
       .map(() => this.globalElementService.isInViewport('work-experience', this.offset));
 
     this.educationInViewport$ = this.scrollSpyService
-      .getObservable('window')
+      .getObservable()
       .map(() => this.globalElementService.isInViewport('education', this.offset));
   }
 

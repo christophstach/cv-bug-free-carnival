@@ -5,7 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SocialNavComponent } from './social-nav/social-nav.component';
 import { SharedModule } from '../shared/shared.module';
-import { ScrollSpyModule } from 'ngx-scrollspy';
 
 @NgModule({
   imports: [

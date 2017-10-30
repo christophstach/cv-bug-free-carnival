@@ -1,12 +1,13 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { educationalBackground } from '../../store/init/educational-background.data';
 import * as moment from 'moment';
-import { ScrollSpyService } from 'ngx-scrollspy';
+
 import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/delay';
+import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
 
 @Component({
   selector: 'app-education',
@@ -25,7 +26,7 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getObservable('window')
+    this.scrollSpyService.getObservable()
       .map(() => this.globalElementService.isInViewport('education', -57))
       .filter(isInViewport => isInViewport)
       .take(1)
