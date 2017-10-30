@@ -48,7 +48,7 @@ jspm_packages/
 
 # firebase functions
 /functions/node_modules
-/functions/dist-server
+/functions/dist
 
 ## ignore generated JavaScript files
 functions/**/*.js
