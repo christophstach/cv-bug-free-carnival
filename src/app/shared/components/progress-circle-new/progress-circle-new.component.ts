@@ -101,18 +101,7 @@ declare interface ProgressBarOptions {
 @Component({
   selector: 'app-progress-circle-new',
   templateUrl: './progress-circle-new.component.html',
-  styleUrls: ['./progress-circle-new.component.scss'],
-  /*animations: [1
-    trigger('state', [
-      state('normal', style({
-        transform: 'rotate(0deg)'
-      })),
-      state('done', style({
-        transform: 'rotate({{degrees}}deg)'
-      }), { params: { degrees: 360 } }),
-      transition('normal => done', animate(1000))
-    ])
-  ]*/
+  styleUrls: ['./progress-circle-new.component.scss']
 })
 export class ProgressCircleNewComponent implements OnInit {
   private circle: any;
