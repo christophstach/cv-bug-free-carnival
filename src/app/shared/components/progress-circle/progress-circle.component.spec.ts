@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProgressRingComponent } from './progress-ring.component';
+import { ProgressCircleComponent } from './progress-circle.component';
 
-describe('ProgressRingComponent', () => {
-  let component: ProgressRingComponent;
-  let fixture: ComponentFixture<ProgressRingComponent>;
+describe('ProgressCircleComponent', () => {
+  let component: ProgressCircleComponent;
+  let fixture: ComponentFixture<ProgressCircleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProgressRingComponent ]
+      declarations: [ ProgressCircleComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProgressRingComponent);
+    fixture = TestBed.createComponent(ProgressCircleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,10 +1,11 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/delay';
 import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
 import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
+import { ProgressCircleNewComponent } from '../../shared/components/progress-circle-new/progress-circle-new.component';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class SkillsComponent implements OnInit {
   private animationClass = 'fadeIn';
 
   @ViewChild('headline') headline: ElementRef;
+  @ViewChildren(ProgressCircleNewComponent) circles: QueryList<ProgressCircleNewComponent>;
 
   constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService) {
   }
@@ -30,6 +32,10 @@ export class SkillsComponent implements OnInit {
         this.headline.nativeElement.classList.toggle('animated', true);
         this.headline.nativeElement.classList.toggle(this.animationClass, true);
         this.headline.nativeElement.classList.toggle('will-animate', false);
+
+        this.circles.forEach((circle) => {
+          circle.animate();
+        });
       });
   }
 

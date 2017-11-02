@@ -39,6 +39,7 @@
     "immutable": "^3.8.2",
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
+    "progressbar.js": "^1.0.1",
     "rxjs": "^5.5.2",
     "ts-loader": "^3.1.0",
     "zone.js": "^0.8.18"

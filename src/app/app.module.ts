@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { ContentModule } from './content/content.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'my-app' }),
+    BrowserAnimationsModule,
     LayoutModule,
     ContentModule,
     SharedModule
