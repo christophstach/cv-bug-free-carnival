@@ -28,6 +28,7 @@
     "moment": "^2.19.1",
     "ngx-scrollspy": "^1.0.0",
     "path": "^0.12.7",
+    "progressbar.js": "^1.0.1",
     "rxjs": "^5.5.2",
     "ts-loader": "^3.1.0",
     "zone.js": "^0.8.18"
