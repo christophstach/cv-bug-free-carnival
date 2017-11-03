@@ -8,8 +8,8 @@ export class SmoothScrollDirective {
   @Input('appSmoothScrollOffset') offset = 55;
 
   @HostListener('click', ['$event'])
-  click(event: MouseEvent) {
-    if (window && document && document.querySelector && window.scroll) {
+  onClick(event) {
+    if (typeof window !== 'undefined') {
       event.preventDefault();
 
       if (this.scrollTo !== '#') {
