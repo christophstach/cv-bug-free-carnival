@@ -6,11 +6,5 @@ import { AfterViewInit, Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit {
-
-  ngAfterViewInit() {
-    if (typeof window !== 'undefined') {
-      window.scroll(0, 1);
-    }
-  }
+export class AppComponent {
 }

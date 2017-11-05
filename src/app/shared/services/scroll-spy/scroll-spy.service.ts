@@ -10,6 +10,11 @@ export class ScrollSpyService {
   constructor() {
     if (typeof window !== 'undefined') {
       this.windowScroll$ = Observable.fromEvent(window, 'scroll');
+
+      setTimeout(() => {
+        window.scroll(0, 1);
+        window.scroll(0, 0);
+      });
     } else {
       this.windowScroll$ = Observable.empty();
     }
