@@ -11,6 +11,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     if (typeof window !== 'undefined') {
       window.scroll(0, 1);
+      window.scroll(0, 0);
     }
   }
 }
