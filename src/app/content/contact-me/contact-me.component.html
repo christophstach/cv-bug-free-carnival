@@ -1,0 +1,59 @@
+<section appGlobalElement="contact-me">
+  <div class="wrapper p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <form #f="ngForm" (submit)="onSubmit($event)">
+            <div class="input-group" *ngIf="contactState.step === 1">
+              <input type="email" class="form-control form-control-lg" placeholder="E-Mail" name="email" ngModel email="true">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="submit" [disabled]="!f.valid">Next!</button>
+              </span>
+            </div>
+
+            <div *ngIf="contactState.step === 2">
+              <div class="form-group my-3">
+                <input type="text" class="form-control form-control-lg" placeholder="Subject" name="subject" ngModel required>
+              </div>
+
+              <div class="form-group my-3">
+                <textarea class="form-control form-control-lg" rows="10" placeholder="Message" name="message" ngModel required></textarea>
+              </div>
+
+              <div class="my-3">
+                <button type="submit" class="btn btn-lg btn-secondary" [disabled]="!f.valid">Next</button>
+              </div>
+            </div>
+
+            <div *ngIf="contactState.step === 3">
+              <pre>{{contactState | json}}</pre>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+
+      <div class="row" *ngIf="!contactState.email">
+        <div class="col-md-4 p-5">
+          <a href="https://github.com/christophstach" target="_blank" class="social-icon iconGithub" title="GitHub">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <div class="col-md-4 p-5">
+          <a href="https://www.xing.com/profile/Christoph_Stach" target="_blank" class="social-icon iconXing"
+             title="Xing">
+            <i class="fa fa-xing"></i></a>
+        </div>
+        <div class="col-md-4 p-5">
+          <a href="https://www.linkedin.com/in/christoph-stach-7586b958/" target="_blank"
+             class="social-icon iconLinkedIn"
+             title="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

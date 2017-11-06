@@ -1,8 +1,6 @@
 @import "./../../../colors";
 
 section {
-  min-height: 100vh;
-
   display: flex;
   flex-direction: column;
 
@@ -14,6 +12,7 @@ section {
     margin: 0;
     flex-grow: 0;
   }
+
   .container {
     flex-grow: 1;
     display: flex;
@@ -30,4 +29,6 @@ section {
       }
     }
   }
+
+  min-height: calc(100vh - 55px);
 }

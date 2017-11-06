@@ -1,0 +1,31 @@
+import { Component, Renderer2, ViewChild } from '@angular/core';
+import { AbstractControl, NgForm } from '@angular/forms';
+
+@Component({
+  selector: 'app-contact-me',
+  templateUrl: './contact-me.component.html',
+  styleUrls: ['./contact-me.component.scss']
+})
+export class ContactMeComponent {
+  @ViewChild('f') form: NgForm;
+  contactState = {
+    step: 1
+  };
+
+  constructor(private renderer: Renderer2) {
+  }
+
+
+  onSubmit(event: Event) {
+    this.contactState.step++;
+
+    this.contactState = {
+      ...this.contactState,
+      ...this.form.value
+    };
+
+    setTimeout(() => {
+      // console.log(this.form);
+    });
+  }
+}

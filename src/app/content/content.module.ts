@@ -4,12 +4,14 @@ import { SkillsComponent } from './skills/skills.component';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { EducationComponent } from './education/education.component';
 import { LanguagesComponent } from './languages/languages.component';
-import { FindMeComponent } from './find-me/find-me.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     SharedModule
   ],
   declarations: [
@@ -17,14 +19,14 @@ import { SharedModule } from '../shared/shared.module';
     WorkExperienceComponent,
     EducationComponent,
     LanguagesComponent,
-    FindMeComponent
+    ContactMeComponent
   ],
   exports: [
     SkillsComponent,
     WorkExperienceComponent,
     EducationComponent,
     LanguagesComponent,
-    FindMeComponent
+    ContactMeComponent
   ]
 })
 export class ContentModule {

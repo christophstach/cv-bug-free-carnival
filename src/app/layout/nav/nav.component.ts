@@ -19,6 +19,7 @@ export class NavComponent implements AfterViewInit {
   skillsInViewport$: Observable<boolean>;
   workExperienceInViewport$: Observable<boolean>;
   educationInViewport$: Observable<boolean>;
+  contactMeInViewport$: Observable<boolean>;
 
   constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService, private renderer: Renderer2) {
   }
@@ -39,6 +40,10 @@ export class NavComponent implements AfterViewInit {
     this.educationInViewport$ = this.scrollSpyService
       .getObservable()
       .map(() => this.globalElementService.isInViewport('education', this.offset));
+
+    this.contactMeInViewport$ = this.scrollSpyService
+      .getObservable()
+      .map(() => this.globalElementService.isInViewport('contact-me', this.offset));
   }
 
   onToggleNavbar(event: Event) {

@@ -1,6 +1,5 @@
 @import "./../../../colors";
 
 section {
-  min-height: 100vh;
-  background-color: $color-secondary-2-0;
+  min-height: calc(100vh - 55px);
 }
