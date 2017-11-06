@@ -5,7 +5,7 @@
         <div class="col-12">
           <form #f="ngForm" (submit)="onSubmit($event)">
             <div class="input-group" *ngIf="contactState.step === 1">
-              <input type="email" class="form-control form-control-lg" placeholder="E-Mail" name="email" ngModel email="true">
+              <input type="email" class="form-control form-control-lg" placeholder="E-Mail" name="email" ngModel email>
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit" [disabled]="!f.valid">Next!</button>
               </span>
@@ -28,13 +28,11 @@
             <div *ngIf="contactState.step === 3">
               <pre>{{contactState | json}}</pre>
             </div>
-
-
           </form>
         </div>
       </div>
 
-      <div class="row" *ngIf="!contactState.email">
+      <div class="row" *ngIf="contactState.step === 1">
         <div class="col-md-4 p-5">
           <a href="https://github.com/christophstach" target="_blank" class="social-icon iconGithub" title="GitHub">
             <i class="fa fa-github"></i>
