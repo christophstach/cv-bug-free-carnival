@@ -17,7 +17,7 @@ export class ContactMeComponent {
     step: 1
   };
 
-  constructor(private renderer: Renderer2) {
+  constructor() {
   }
 
 
@@ -28,9 +28,5 @@ export class ContactMeComponent {
       ...this.contactState,
       ...this.form.value
     };
-
-    setTimeout(() => {
-      // console.log(this.form);
-    });
   }
 }
