@@ -1,5 +1,5 @@
 import { Component, Renderer2, ViewChild } from '@angular/core';
-import { AbstractControl, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,7 +8,12 @@ import { AbstractControl, NgForm } from '@angular/forms';
 })
 export class ContactMeComponent {
   @ViewChild('f') form: NgForm;
-  contactState = {
+  contactState: {
+    step: number,
+    email?: string,
+    subject?: string,
+    message?: string
+  } = {
     step: 1
   };
 
