@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
-import { GlobalElementService } from '../../services/global-element/global-element.service';
+import { GlobalElementService } from '../../../core/services/global-element.service';
 
 @Directive({
   selector: '[appGlobalElement]'

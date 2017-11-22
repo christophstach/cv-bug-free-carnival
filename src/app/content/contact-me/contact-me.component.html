@@ -5,7 +5,7 @@
         <div class="col-12">
           <form #f="ngForm" (submit)="onSubmit($event)">
             <div class="input-group" *ngIf="contactState.step === 1">
-              <input type="email" class="form-control form-control-lg" placeholder="E-Mail" name="email" ngModel email>
+              <input type="email" class="form-control form-control-lg" placeholder="E-Mail" name="from" ngModel email>
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="submit" [disabled]="!f.valid">Next!</button>
               </span>
@@ -13,7 +13,7 @@
 
             <div *ngIf="contactState.step === 2">
               <div class="form-group mb-3">
-                <input type="text" class="form-control form-control-lg" placeholder="Subject" name="subject" ngModel required>
+                <input type="text" class="form-control form-control-lg" placeholder="Subject" name="subject" #subjectInput ngModel required>
               </div>
 
               <div class="form-group my-3">
@@ -26,7 +26,29 @@
             </div>
 
             <div *ngIf="contactState.step === 3">
-              <pre>{{contactState | json}}</pre>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true"></i> Sending...
+            </div>
+
+            <div *ngIf="contactState.step === 4">
+              <div class="alert alert-success animated bounceIn" role="alert">
+                <h4 class="alert-heading">E-Mail sent!</h4>
+                <p>
+                  You successfully sent an E-Mail to me.
+                  You should receive an confirmation within the next minutes.
+                  I will get in touch with you soon.
+                  Thank you for using my E-Mail form.
+                  Bellow you can review the data you entered.
+                </p>
+                <hr>
+                <dl>
+                  <dt>E-Mail</dt>
+                  <dd>{{contactState.from}}</dd>
+                  <dt>Subject</dt>
+                  <dd>{{contactState.subject}}</dd>
+                  <dt>Message</dt>
+                  <dd>{{contactState.message}}</dd>
+                </dl>
+              </div>
             </div>
           </form>
         </div>

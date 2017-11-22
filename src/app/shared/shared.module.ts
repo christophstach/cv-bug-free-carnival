@@ -6,9 +6,8 @@ import { TimelineItemComponent } from './components/timeline/timeline-item/timel
 import { BootstrapCollapsibleNavDirective } from './directives/bootstrap-collapsible-nav/bootstrap-collapsible-nav.directive';
 import { SmoothScrollDirective } from './directives/smooth-scroll/smooth-scroll.directive';
 import { GlobalElementDirective } from './directives/global-element/global-element.directive';
-import { GlobalElementService } from './services/global-element/global-element.service';
-import { ScrollSpyService } from './services/scroll-spy/scroll-spy.service';
 import { ProgressCircleNewComponent } from './components/progress-circle-new/progress-circle-new.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -23,11 +22,9 @@ import { ProgressCircleNewComponent } from './components/progress-circle-new/pro
     SmoothScrollDirective,
     GlobalElementDirective
   ],
-  providers: [
-    GlobalElementService,
-    ScrollSpyService
-  ],
   exports: [
+    CommonModule,
+    HttpClientModule,
     ProgressCircleComponent,
     ProgressCircleNewComponent,
     TimelineComponent,

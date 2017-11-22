@@ -3,8 +3,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/delay';
-import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
-import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
+import { GlobalElementService } from '../../core/services/global-element.service';
+import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 import { ProgressCircleNewComponent } from '../../shared/components/progress-circle-new/progress-circle-new.component';
 
 

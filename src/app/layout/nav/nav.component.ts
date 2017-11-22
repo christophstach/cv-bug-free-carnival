@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
+import { GlobalElementService } from '../../core/services/global-element.service';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
+import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 
 @Component({
   selector: 'app-nav',

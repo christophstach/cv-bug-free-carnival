@@ -1,12 +1,12 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { workExperience } from '../../store/init/work-experience.data';
 import * as moment from 'moment';
-import { GlobalElementService } from '../../shared/services/global-element/global-element.service';
+import { GlobalElementService } from '../../core/services/global-element.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/delay';
-import { ScrollSpyService } from '../../shared/services/scroll-spy/scroll-spy.service';
+import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 
 @Component({
   selector: 'app-work-experience',
