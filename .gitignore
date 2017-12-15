@@ -6,6 +6,7 @@
 /tmp
 /out-tsc
 
+
 # dependencies
 /node_modules
 
@@ -41,20 +42,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-
-
-jspm_packages/
-
-
-# firebase functions
-/functions/node_modules
-/functions/dist
-
-## ignore generated JavaScript files
-functions/**/*.js
-functions/**/*.js.map
-
-
-
-
