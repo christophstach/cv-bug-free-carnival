@@ -37,8 +37,6 @@ export class EducationComponent implements OnInit {
         this.timeline.nativeElement.classList.toggle('animated', true);
         this.timeline.nativeElement.classList.toggle(this.animationClass, true);
         this.timeline.nativeElement.classList.toggle('will-animate', false);
-
-        this.scrollSpyService.reset();
       });
   }
 
