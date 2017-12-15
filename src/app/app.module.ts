@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
 import { CoreModule } from './core/core.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CoreModule } from './core/core.module';
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

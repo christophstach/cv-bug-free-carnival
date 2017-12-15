@@ -7,7 +7,6 @@ import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialNavComponent } from './components/social-nav/social-nav.component';
-import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -24,11 +23,13 @@ import { HttpClientModule } from '@angular/common/http';
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    SocialNavComponent,
-    MainComponent
+    SocialNavComponent
   ],
   exports: [
-    MainComponent
+    NavComponent,
+    HeaderComponent,
+    FooterComponent,
+    SocialNavComponent,
   ]
 })
 export class CoreModule {
