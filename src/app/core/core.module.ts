@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SocialNavComponent } from './components/social-nav/social-nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AppShellComponent } from './components/app-shell/app-shell.component';
 
 @NgModule({
   imports: [
@@ -20,12 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     ScrollSpyService
   ],
   declarations: [
+    AppShellComponent,
     NavComponent,
     HeaderComponent,
     FooterComponent,
     SocialNavComponent
   ],
   exports: [
+    AppShellComponent,
     NavComponent,
     HeaderComponent,
     FooterComponent,
