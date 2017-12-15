@@ -20,19 +20,17 @@ export class SmoothScrollDirective {
           top: top - this.offset,
           behavior: 'smooth'
         });
-
-        if (window.history.pushState) {
-          window.history.pushState(null, null, this.scrollTo);
-        } else {
-          window.location.hash = this.scrollTo;
-        }
       } else {
         window.scroll({
           top: 0,
           behavior: 'smooth'
         });
+      }
 
-        window.location.hash = '#';
+      if (window.history.pushState) {
+        window.history.pushState(null, null, this.scrollTo);
+      } else {
+        window.location.hash = this.scrollTo;
       }
     }
   }
