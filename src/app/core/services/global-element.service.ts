@@ -28,12 +28,14 @@ export class GlobalElementService {
         bottom: html.clientHeight + offset
       };
 
-      return (
+      const inViewport = (
         rect.right >= viewport.left &&
         rect.left <= viewport.right &&
         rect.bottom >= viewport.top &&
         rect.top <= viewport.bottom
       );
+
+      return inViewport;
     }
 
   }
