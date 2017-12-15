@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 const express = require('express');
 const {join, dirname} = require('path');
-const {readFile, exists, writeFile, mkdir} = require('mz/fs')
+const {readFile, exists, writeFile, mkdir} = require('mz/fs');
 const {uniq, difference} = require('lodash');
 
 // Defining some configuration
@@ -45,6 +45,14 @@ async function main() {
 
     // Requesting the first page in PAGES array
     await page.goto(`${HOST}/${p}`);
+
+    console.log('Waiting...');
+    // await new Promise((resolve) => {
+    //   setTimeout(() => {
+    //     resolve();
+    //   }, 10000)
+    // });
+
 
     // Getting the html content after the Chromium finish rendering.
     const result = await page.evaluate(() => document.documentElement.outerHTML);

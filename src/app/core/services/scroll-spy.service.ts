@@ -62,7 +62,7 @@ export class ScrollSpyService {
     return this.scrollSpy$;
   }
 
-  reset(offset = 55) {
+  reset(offset = 56) {
     const scrollSpies = document.querySelectorAll('[data-scroll-spy]');
 
     Array.prototype.forEach.call(scrollSpies, (e) => {

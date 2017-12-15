@@ -33,6 +33,7 @@ export class SkillsComponent implements OnInit {
 
         this.circles.forEach((circle) => {
           circle.animate();
+          this.scrollSpyService.reset();
         });
       });
   }
