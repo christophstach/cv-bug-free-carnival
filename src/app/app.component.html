@@ -1,17 +1,8 @@
-<div class="page">
-  <app-nav></app-nav>
+<app-nav></app-nav>
+<app-header id="home"></app-header>
 
-  <app-header id="home"></app-header>
-  <app-skills id="skills"></app-skills>
-  <app-work-experience id="work-experience"></app-work-experience>
-  <app-education id="education"></app-education>
-  <app-contact-me id="contact-me"></app-contact-me>
-
-
-  <!--
-  <app-languages id="languages"></app-languages>
-  <app-contact-me id="contact-me"></app-contact-me>
-  -->
-
-  <app-footer></app-footer>
+<div>
+  <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>

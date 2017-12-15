@@ -1,21 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
+
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
-import { LayoutModule } from './layout/layout.module';
-import { ContentModule } from './content/content.module';
-import { SharedModule } from './shared/shared.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from '../environments/environment';
 import { CoreModule } from './core/core.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'my-app' }),
-    BrowserAnimationsModule,
-    CoreModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    AppRoutingModule,
+    CoreModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

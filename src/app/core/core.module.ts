@@ -1,26 +1,36 @@
 import { NgModule } from '@angular/core';
-import { ScrollSpyService } from './services/scroll-spy.service';
-import { GlobalElementService } from './services/global-element.service';
-import { MailService } from './services/mail.service';
-import { ContentModule } from '../content/content.module';
-import { LayoutModule } from '../layout/layout.module';
 import { SharedModule } from '../shared/shared.module';
+import { MailService } from './services/mail.service';
+import { ScrollSpyService } from './services/scroll-spy.service';
+import { NavComponent } from './components/nav/nav.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SocialNavComponent } from './components/social-nav/social-nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppShellComponent } from './components/app-shell/app-shell.component';
 
 @NgModule({
   imports: [
     SharedModule,
-    LayoutModule,
-    ContentModule
+    HttpClientModule
   ],
   providers: [
-    GlobalElementService,
-    ScrollSpyService,
     MailService,
+    ScrollSpyService
   ],
-  declarations: [],
+  declarations: [
+    AppShellComponent,
+    NavComponent,
+    HeaderComponent,
+    FooterComponent,
+    SocialNavComponent
+  ],
   exports: [
-    LayoutModule,
-    ContentModule
+    AppShellComponent,
+    NavComponent,
+    HeaderComponent,
+    FooterComponent,
+    SocialNavComponent,
   ]
 })
 export class CoreModule {

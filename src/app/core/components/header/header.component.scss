@@ -1,0 +1,53 @@
+@import './../../../../colors';
+
+header {
+  padding-top: 80px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary-0;
+  color: #FFFFFF;
+  text-align: center;
+
+  .intro {
+    img {
+      width: 400px
+    }
+
+    h1 {
+      margin-top: 3rem;
+      text-transform: uppercase;
+
+      small {
+        font-size: 1.5rem;
+        text-transform: none;
+      }
+    }
+  }
+
+  min-height: 100vh;
+}
+
+.hr-icon {
+  hr {
+    max-width: 250px;
+    margin: 40px auto 30px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-top: solid 5px;
+
+    &:after {
+      font-family: FontAwesome;
+      font-size: 40px;
+      background-color: $color-primary-0;
+
+      position: relative;
+      top: -25px;
+      display: inline-block;
+      padding: 0 0.25em;
+      content: '\f005';
+    }
+  }
+}
