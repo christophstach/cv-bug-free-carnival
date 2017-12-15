@@ -31,6 +31,8 @@ export class SmoothScrollDirective {
           top: 0,
           behavior: 'smooth'
         });
+
+        window.location.hash = '#';
       }
     }
   }
