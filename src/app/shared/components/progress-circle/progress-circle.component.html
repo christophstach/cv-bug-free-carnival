@@ -1,0 +1,15 @@
+<div class="progress">
+  <div class="progress-left">
+    <div
+      class="progress-bar"
+      [@leftState]="{ value: leftState, params: { degrees: calculateLeftDegrees() } }"></div>
+  </div>
+  <div class="progress-right">
+    <div
+      class="progress-bar"
+      (@rightState.done)="rightStateAnimationDone($event)"
+      [@rightState]="{ value: rightState, params: { degrees: calculateRightDegrees() } }"></div>
+  </div>
+  <div class="progress-value">{{value * 100 }}%</div>
+</div>
+<div class="mt-3">{{label}}</div>
