@@ -16,19 +16,21 @@ export class MainComponent implements AfterViewInit {
     this.scrollSpyService.reset();
 
     if (window) {
-      if (window.location.hash !== '#') {
-        const element = document.querySelector(window.location.hash) as HTMLElement;
-        const top = element.offsetTop;
+      if (window.location.hash) {
+        if (window.location.hash !== '#') {
+          const element = document.querySelector(window.location.hash) as HTMLElement;
+          const top = element.offsetTop;
 
-        window.scroll({
-          top: top - this.offset,
-          behavior: 'smooth'
-        });
-      } else {
-        window.scroll({
-          top: 0,
-          behavior: 'smooth'
-        });
+          window.scroll({
+            top: top - this.offset,
+            behavior: 'smooth'
+          });
+        } else {
+          window.scroll({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
       }
     }
   }
