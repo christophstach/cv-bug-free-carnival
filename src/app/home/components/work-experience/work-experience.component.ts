@@ -2,7 +2,6 @@ import * as moment from 'moment';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { workExperience } from '../../../core/store/init/work-experience.data';
 import { ScrollSpyService } from '../../../core/services/scroll-spy.service';
-import { GlobalElementService } from '../../../core/services/global-element.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
@@ -22,13 +21,12 @@ export class WorkExperienceComponent implements OnInit {
 
   timelineItems = workExperience;
 
-  constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService) {
+  constructor(private scrollSpyService: ScrollSpyService) {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getObservable()
-      .map(() => this.globalElementService.isInViewport('work-experience', -57))
-      .filter(isInViewport => isInViewport)
+    this.scrollSpyService.getScrollSpy()
+      .filter((data) => data['work-experience'])
       .take(1)
       .delay(1000)
       .subscribe(() => {

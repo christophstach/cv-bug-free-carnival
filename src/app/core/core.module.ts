@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
-import { GlobalElementService } from './services/global-element.service';
 import { MailService } from './services/mail.service';
 import { ScrollSpyService } from './services/scroll-spy.service';
 import { NavComponent } from './components/nav/nav.component';
@@ -16,7 +15,6 @@ import { AppShellComponent } from './components/app-shell/app-shell.component';
     HttpClientModule
   ],
   providers: [
-    GlobalElementService,
     MailService,
     ScrollSpyService
   ],

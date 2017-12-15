@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ProgressCircleNewComponent } from '../../../shared/components/progress-circle-new/progress-circle-new.component';
 import { ScrollSpyService } from '../../../core/services/scroll-spy.service';
-import { GlobalElementService } from '../../../core/services/global-element.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
@@ -19,13 +18,12 @@ export class SkillsComponent implements OnInit {
   @ViewChild('headline') headline: ElementRef;
   @ViewChildren(ProgressCircleNewComponent) circles: QueryList<ProgressCircleNewComponent>;
 
-  constructor(private scrollSpyService: ScrollSpyService, private globalElementService: GlobalElementService) {
+  constructor(private scrollSpyService: ScrollSpyService) {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getObservable()
-      .map(() => this.globalElementService.isInViewport('skills', -57))
-      .filter(isInViewport => isInViewport)
+    this.scrollSpyService.getScrollSpy()
+      .filter((data) => data['skills'])
       .take(1)
       .delay(1000)
       .subscribe(() => {

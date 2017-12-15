@@ -11,29 +11,21 @@
   </button>
   <div class="collapse navbar-collapse" #collapsibleNavbar>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item" [ngClass]="{'active': (homeInViewport$ | async)}">
-        <a class="nav-link" href="#home" appSmoothScroll="#">Home</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': (skillsInViewport$ | async)}">
-        <a class="nav-link" href="#skills" appSmoothScroll="#skills">Skills</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': (workExperienceInViewport$ | async)}">
-        <a class="nav-link" href="#work-experience" appSmoothScroll="#work-experience">Work Experience</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': (educationInViewport$ | async)}">
-        <a class="nav-link" href="#education" appSmoothScroll="#education">Education</a>
-      </li>
-      <li class="nav-item" [ngClass]="{'active': (contactMeInViewport$ | async)}">
-        <a class="nav-link" href="#contact-me" appSmoothScroll="#contact-me">Contact me</a>
-      </li>
-      <!--
       <li class="nav-item">
-        <a class="nav-link" href="#languages" appSmoothScroll="languages">Languages</a>
+        <a class="nav-link" href="#home" appSmoothScroll="#" data-scroll-spy-link>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#contact-me" appSmoothScroll="contact-me">Find me</a>
+        <a class="nav-link" href="#skills" appSmoothScroll="#skills" data-scroll-spy-link>Skills</a>
       </li>
-      -->
+      <li class="nav-item">
+        <a class="nav-link" href="#work-experience" appSmoothScroll="#work-experience" data-scroll-spy-link>Work Experience</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#education" appSmoothScroll="#education" data-scroll-spy-link>Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#contact-me" appSmoothScroll="#contact-me" data-scroll-spy-link>Contact me</a>
+      </li>
     </ul>
   </div>
 </nav>
