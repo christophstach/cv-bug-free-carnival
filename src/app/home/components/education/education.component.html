@@ -5,7 +5,7 @@
       <div class="item-inner">
         <h3 class="degree">{{item.program}}</h3>
         <div class="education-body">
-          {{item.name}}
+          {{item.name}}, {{item.location}}
         </div><!--//education-body-->
         <div class="time">{{item.startDate | moment:'MMMM YYYY'}} - {{item.endDate.getMonth ? (item.endDate | moment:'MMMM YYYY') : item.endDate}} </div>
         <div class="desc">
