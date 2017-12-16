@@ -99,7 +99,7 @@ declare interface ProgressBarOptions {
 }
 
 @Component({
-  selector: 'app-progress-circle-new',
+  selector: 'app-progress-circle',
   templateUrl: './progress-circle.component.html',
   styleUrls: ['./progress-circle.component.scss']
 })
