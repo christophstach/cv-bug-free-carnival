@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ProgressCircleNewComponent } from './components/progress-circle-new/progress-circle-new.component';
 import { ProgressCircleComponent } from './components/progress-circle/progress-circle.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelineItemComponent } from './components/timeline/timeline-item/timeline-item.component';
@@ -19,7 +18,6 @@ import { SocialNavComponent } from './components/social-nav/social-nav.component
     BootstrapCollapsibleNavDirective,
     SmoothScrollDirective,
     MomentPipe,
-    ProgressCircleNewComponent,
     ProgressCircleComponent,
     TimelineComponent,
     TimelineItemComponent,
@@ -31,7 +29,6 @@ import { SocialNavComponent } from './components/social-nav/social-nav.component
     BootstrapCollapsibleNavDirective,
     SmoothScrollDirective,
     MomentPipe,
-    ProgressCircleNewComponent,
     ProgressCircleComponent,
     TimelineComponent,
     TimelineItemComponent,

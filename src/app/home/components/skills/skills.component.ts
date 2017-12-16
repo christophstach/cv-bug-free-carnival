@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { ProgressCircleNewComponent } from '../../../shared/components/progress-circle-new/progress-circle-new.component';
+import { ProgressCircleComponent } from '../../../shared/components/progress-circle/progress-circle.component';
 import { ScrollSpyService } from '../../../core/services/scroll-spy.service';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
@@ -16,7 +16,7 @@ export class SkillsComponent implements OnInit {
   private animationClass = 'fadeIn';
 
   @ViewChild('headline') headline: ElementRef;
-  @ViewChildren(ProgressCircleNewComponent) circles: QueryList<ProgressCircleNewComponent>;
+  @ViewChildren(ProgressCircleComponent) circles: QueryList<ProgressCircleComponent>;
 
   constructor(private scrollSpyService: ScrollSpyService) {
   }
