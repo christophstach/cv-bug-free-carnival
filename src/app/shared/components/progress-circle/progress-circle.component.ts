@@ -100,10 +100,10 @@ declare interface ProgressBarOptions {
 
 @Component({
   selector: 'app-progress-circle-new',
-  templateUrl: './progress-circle-new.component.html',
-  styleUrls: ['./progress-circle-new.component.scss']
+  templateUrl: './progress-circle.component.html',
+  styleUrls: ['./progress-circle.component.scss']
 })
-export class ProgressCircleNewComponent implements OnInit {
+export class ProgressCircleComponent implements OnInit {
   private circle: any;
   @ViewChild('container') container: ElementRef;
 
