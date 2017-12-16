@@ -22,7 +22,7 @@ export const workExperience = [
   {
     employer: 'Working holiday',
     position: '',
-    location: 'mainly in Perth, Australia',
+    location: 'Mainly in Perth, Australia',
     startDate: new Date(2014, 10),
     endDate: new Date(2015, 12),
     responsibilities: [],

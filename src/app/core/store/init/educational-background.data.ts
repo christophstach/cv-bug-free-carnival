@@ -25,7 +25,7 @@ export const educationalBackground = [
   },
   {
     name: 'Realschule Schüttorf',
-    program: null,
+    program: 'Middle School',
     location: 'Schüttorf, Germany',
     startDate: new Date(2000, 8),
     endDate: new Date(2004, 6),

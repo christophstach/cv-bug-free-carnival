@@ -1,17 +1,15 @@
-<li [ngClass]="{'timeline-inverted': inverted}">
-  <div class="timeline-badge" [ngClass]="[badgeType]">
-    <div class="date">
-      <div class="month">{{dateFormat(date, 'MMM')}}</div>
-      <div class="year">{{dateFormat(date, 'YYYY')}}</div>
-    </div>
+<div class="item">
+  <div class="work-place">
+    <h3 class="place">{{employer}}</h3>
+    <div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>{{location}}</div>
   </div>
-  <div class="timeline-panel">
-    <div class="timeline-heading">
-      <h4 class="timeline-title">{{title}}</h4>
-      <small class="text-muted"><i class="fa fa-calendar"></i> {{subTitle}}</small>
+  <div class="job-meta">
+    <div class="title">{{position}}</div>
+    <div class="time">
+      {{startDate | moment:'MMMM YYYY'}} - {{endDate.getMonth ? (endDate | moment:'MMMM YYYY') : endDate}}
     </div>
-    <div class="timeline-body">
-      <ng-content></ng-content>
-    </div>
-  </div>
-</li>
+  </div><!--//job-meta-->
+  <div class="job-desc">
+    <ng-content></ng-content>
+  </div><!--//job-desc-->
+</div><!--//item-->

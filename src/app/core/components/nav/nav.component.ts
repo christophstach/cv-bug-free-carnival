@@ -1,4 +1,5 @@
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ScrollSpyService } from '../../services/scroll-spy.service';
 
 
 @Component({
@@ -6,23 +7,24 @@ import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
-  @ViewChild('collapsibleNavbar') collapsibleNavbar: ElementRef;
+export class NavComponent implements OnInit {
+  @ViewChild('pageNavWrapper') pageNavWrapper: ElementRef;
 
-  private isCollapsed = true;
-
-
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2, private scrollSpyService: ScrollSpyService) {
   }
 
+  ngOnInit() {
+    this.scrollSpyService.getWindowScroll().subscribe(() => {
+      this.renderer.removeClass(this.pageNavWrapper.nativeElement, 'fixed');
 
-  onToggleNavbar(event: Event) {
-    if (this.isCollapsed) {
-      this.renderer.removeClass(this.collapsibleNavbar.nativeElement, 'collapse');
-    } else {
-      this.renderer.addClass(this.collapsibleNavbar.nativeElement, 'collapse');
-    }
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const topDistance = this.pageNavWrapper.nativeElement.getBoundingClientRect().top + scrollTop;
 
-    this.isCollapsed = !this.isCollapsed;
+      if (topDistance > scrollTop) {
+        this.renderer.removeClass(this.pageNavWrapper.nativeElement, 'fixed');
+      } else {
+        this.renderer.addClass(this.pageNavWrapper.nativeElement, 'fixed');
+      }
+    });
   }
 }

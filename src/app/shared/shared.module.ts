@@ -8,6 +8,7 @@ import { TimelineItemComponent } from './components/timeline/timeline-item/timel
 import { BootstrapCollapsibleNavDirective } from './directives/bootstrap-collapsible-nav/bootstrap-collapsible-nav.directive';
 import { SmoothScrollDirective } from './directives/smooth-scroll/smooth-scroll.directive';
 import { MomentPipe } from './pipes/moment.pipe';
+import { SocialNavComponent } from './components/social-nav/social-nav.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { MomentPipe } from './pipes/moment.pipe';
     ProgressCircleComponent,
     TimelineComponent,
     TimelineItemComponent,
-    MomentPipe
+    SocialNavComponent
   ],
   exports: [
     CommonModule,
@@ -33,7 +34,8 @@ import { MomentPipe } from './pipes/moment.pipe';
     ProgressCircleNewComponent,
     ProgressCircleComponent,
     TimelineComponent,
-    TimelineItemComponent
+    TimelineItemComponent,
+    SocialNavComponent
   ]
 })
 export class SharedModule {

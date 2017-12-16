@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import * as moment from 'moment';
 
 @Component({
   selector: 'app-timeline-item',
@@ -7,14 +6,9 @@ import * as moment from 'moment';
   styleUrls: ['./timeline-item.component.scss']
 })
 export class TimelineItemComponent {
-  @Input() inverted = false;
-  @Input() title = '';
-  @Input() subTitle = '';
-  @Input() date: Date = new Date();
-  @Input() badgeType = 'default';
-
-  dateFormat(date: Date, format: string) {
-    return moment(date).format(format);
-  }
-
+  @Input() startDate: Date = new Date();
+  @Input() endDate: Date = null;
+  @Input() position: string;
+  @Input() employer: string;
+  @Input() location: string;
 }

@@ -111,13 +111,13 @@ export class ProgressCircleNewComponent implements OnInit {
   @Input() options: ProgressBarOptions = {
     duration: 1200,
     strokeWidth: 5,
-    color: '#479368',
+    color: '#00BCD4',
     trailWidth: 2,
     easing: 'easeInOut',
     text: {
       autoStyleContainer: true,
       style: {
-        fontSize: '2.5rem',
+        fontSize: '20px',
         position: 'absolute',
         width: '100%',
         color: '#000000',

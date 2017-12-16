@@ -1,8 +1,14 @@
-<app-nav></app-nav>
 <app-header id="home"></app-header>
 
-<div>
+<div class="wrapper container">
   <router-outlet></router-outlet>
 </div>
 
-<app-footer></app-footer>
+<footer class="footer text-center">
+  <div class="container">
+    <small class="copyright">Copyright @ <a href="https://christophstach.me/" target="_blank">Christoph Stach</a>
+    </small>
+  </div><!--//container-->
+</footer>
+
+<app-back-to-top></app-back-to-top>

@@ -1,62 +1,64 @@
-<section data-scroll-spy="skills">
-  <h2>
-    <div class="will-animate" #headline><i class="fa fa-wrench" aria-hidden="true"></i> My skills</div>
-  </h2>
-
-  <div class="container">
-    <div class="skills-wrapper">
-
-      <div class="row">
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.85" label="HTML5 / CSS3"></app-progress-circle-new>
+<section id="skills" class="skills-section section text-center" data-scroll-spy="skills">
+  <h2 class="section-title">Professional Skills</h2>
+  <div class="top-skills">
+    <h3 class="subtitle">Top Skills</h3>
+    <div class="row">
+      <div class="item col-12 col-md-4">
+        <div class="item-inner">
+          <div class="text-center chart">
+            <app-progress-circle-new [value]="0.90"></app-progress-circle-new>
           </div>
-        </div>
+          <h4 class="skill-name">JavaScript & CSS</h4>
+          <div class="level">Expert, 6 years</div>
+          <div class="desc">
+          </div>
+        </div><!--//item-inner-->
+      </div><!--//item-->
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.8" label="JavaScript"></app-progress-circle-new>
+      <div class="item col-12 col-md-4">
+        <div class="item-inner">
+          <div class="text-center chart">
+            <app-progress-circle-new [value]="0.80"></app-progress-circle-new>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.8" label="Angular"></app-progress-circle-new>
+          <h4 class="skill-name">Angular</h4>
+          <div class="level">Expert, 2 years</div>
+          <div class="desc">
           </div>
-        </div>
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.8" label="Vue.js"></app-progress-circle-new>
-          </div>
-        </div>
+        </div><!--//item-inner-->
+      </div><!--//item-->
 
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.45" label="React / Redux"></app-progress-circle-new>
+      <div class="item col-12 col-md-4">
+        <div class="item-inner">
+          <div class="text-center chart">
+            <app-progress-circle-new [value]="0.75"></app-progress-circle-new>
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.70" label="PHP / Symfony"></app-progress-circle-new>
+          <h4 class="skill-name">PHP</h4>
+          <div class="level">Advanced, 6 years</div>
+          <div class="desc">
           </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.60" label="Java"></app-progress-circle-new>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="skill">
-            <app-progress-circle-new [value]="0.45" label="Spring"></app-progress-circle-new>
-          </div>
-        </div>
+        </div><!--//item-inner-->
+      </div><!--//item-->
 
 
-      </div>
     </div>
   </div>
 
+  <div class="other-skills">
+    <h3 class="subtitle">Other Skills</h3>
+    <div class="misc-skills">
+      <span class="skill-tag">HTML5</span>
+      <span class="skill-tag">CSS3</span>
+      <span class="skill-tag">SASS</span>
+      <span class="skill-tag">LESS</span>
+      <span class="skill-tag">Git</span>
+      <br>
+      <span class="skill-tag">Java</span>
+      <span class="skill-tag">Spring</span>
+      <span class="skill-tag">Symfony</span>
+      <span class="skill-tag">Laravel</span>
+      <span class="skill-tag">German</span>
+      <span class="skill-tag">English</span>
+      <span class="skill-tag">Spanish</span>
+    </div>
+  </div>
 </section>

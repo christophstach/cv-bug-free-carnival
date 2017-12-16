@@ -1,25 +1,44 @@
-<header class="container-fluid" data-scroll-spy="home">
+<header class="header" data-scroll-spy="home">
+  <div class="top-bar container-fluid">
+    <div class="actions">
+      <!--
+      <a class="btn d-none d-md-inline-block" href="mailto:someone@example.com"><i class="fa fa-paper-plane" aria-hidden="true"></i> Hire Me</a>
+      <a class="btn" href="#"><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
+      -->
+    </div><!--//actions-->
+    <app-social-nav></app-social-nav>
+  </div><!--//top-bar-->
+
   <div class="intro">
-    <div class="row">
-      <div class="offset-1 col-10">
-        <img class="rounded-circle img-fluid" src="assets/me.jpg" alt="Foto of me">
-      </div>
-    </div>
+    <div class="container text-center">
+      <img class="profile-image rounded-circle" src="assets/me.jpg" alt="Foto of me">
+      <h1 class="name">Christoph Stach</h1>
+      <div class="title">Frontend Engineer - Web Developer - Software Engineer - Full Stack Developer</div>
+      <div class="profile">
+        <!--<p>Profile info goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.</p>-->
+      </div><!--//profile-->
+    </div><!--//container-->
+  </div><!--//intro-->
 
+  <div class="contact-info">
+    <div class="container text-center">
+      <ul class="list-inline">
 
-    <div class="row">
-      <div class="col-12">
-        <h1>
-          Christoph Stach
+        <li class="email list-inline-item">
+          <i class="fa fa-envelope"></i>
+          <a href="#contact-me" appSmoothScroll="#contact-me">Send me a mail</a>
+        </li>
+        <!--
+          <li class="list-inline-item"><i class="fa fa-phone"></i> <a href="tel: 0123456789">0123 456 7890</a>
+        -->
+        <li class="website list-inline-item">
+          <i class="fa fa-globe"></i>
+          <a href="#" target="_blank">christophstach.me</a></li>
+      </ul>
+    </div><!--//container-->
+  </div><!--//contact-info-->
 
-          <div class="hr-icon">
-            <hr>
-          </div>
+  <app-nav></app-nav>
 
-          <small>Frontend Engineer - Web Developer - Software Engineer - Full Stack Developer</small>
-        </h1>
-      </div>
-    </div>
+</header><!--//header-->
 
-  </div>
-</header>

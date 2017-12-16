@@ -1,13 +1,11 @@
-@import 'variables';
-
-@import '~bootstrap/scss/bootstrap';
-@import '~font-awesome/scss/font-awesome';
-
-
 body {
   position: relative;
 }
 
 .will-animate {
   visibility: hidden;
+}
+
+section:last-child {
+  margin-bottom: 45px !important;
 }

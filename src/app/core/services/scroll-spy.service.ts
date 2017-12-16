@@ -19,11 +19,10 @@ export class ScrollSpyService {
           const result = { ...this.scrollSpies };
           const keys = Object.keys(this.scrollSpies);
 
-
           keys.forEach((key) => {
             if (this.scrollSpies[key] <= scrollPosition) {
-              const allActiveLis = document.querySelector('li.active');
-              const currentLi = document.querySelector('a[data-scroll-spy-link][href*=' + key + ']').parentElement;
+              const allActiveLis = document.querySelector('a.active');
+              const currentLi = document.querySelector('a[data-scroll-spy-link][href*=' + key + ']');
 
               if (allActiveLis) {
                 allActiveLis.classList.remove('active');
@@ -62,7 +61,7 @@ export class ScrollSpyService {
     return this.scrollSpy$;
   }
 
-  reset(offset = 56) {
+  reset(offset = 190) {
     const scrollSpies = document.querySelectorAll('[data-scroll-spy]');
 
     Array.prototype.forEach.call(scrollSpies, (e) => {

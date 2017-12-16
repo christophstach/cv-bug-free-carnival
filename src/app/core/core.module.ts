@@ -5,9 +5,9 @@ import { ScrollSpyService } from './services/scroll-spy.service';
 import { NavComponent } from './components/nav/nav.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SocialNavComponent } from './components/social-nav/social-nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppShellComponent } from './components/app-shell/app-shell.component';
+import { BackToTopComponent } from './components/back-to-top/back-to-top.component';
 
 @NgModule({
   imports: [
@@ -23,14 +23,14 @@ import { AppShellComponent } from './components/app-shell/app-shell.component';
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    SocialNavComponent
+    BackToTopComponent
   ],
   exports: [
     AppShellComponent,
     NavComponent,
     HeaderComponent,
     FooterComponent,
-    SocialNavComponent,
+    BackToTopComponent
   ]
 })
 export class CoreModule {

@@ -30,13 +30,7 @@ export class WorkExperienceComponent implements OnInit {
       .take(1)
       .delay(1000)
       .subscribe(() => {
-        this.headline.nativeElement.classList.toggle('animated', true);
-        this.headline.nativeElement.classList.toggle(this.animationClass, true);
-        this.headline.nativeElement.classList.toggle('will-animate', false);
 
-        this.timeline.nativeElement.classList.toggle('animated', true);
-        this.timeline.nativeElement.classList.toggle(this.animationClass, true);
-        this.timeline.nativeElement.classList.toggle('will-animate', false);
       });
   }
 
