@@ -16,15 +16,9 @@ export class SmoothScrollDirective {
         const element = document.querySelector(this.scrollTo) as HTMLElement;
         const top = element.offsetTop;
 
-        window.scroll({
-          top: top - this.offset,
-          behavior: 'smooth'
-        });
+        this.scroll(top - this.offset);
       } else {
-        window.scroll({
-          top: 0,
-          behavior: 'smooth'
-        });
+        this.scroll(0);
       }
 
       if (window.history.pushState) {
@@ -33,5 +27,12 @@ export class SmoothScrollDirective {
         window.location.hash = this.scrollTo;
       }
     }
+  }
+
+  private scroll(value: number) {
+    window.scroll({
+      top: value,
+      behavior: 'smooth'
+    });
   }
 }
