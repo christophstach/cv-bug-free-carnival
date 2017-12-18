@@ -85,6 +85,9 @@ async function main() {
   // Closes Chromium and finishes the express server.
   browser.close();
   server.close();
+
+  await writeFile(process.cwd() + '/dist/sitemap.xml', await readFile(process.cwd() + '/src/root-assets/sitemap.xml'));
+  await writeFile(process.cwd() + '/dist/robots.txt', await readFile(process.cwd() + '/src/root-assets/robots.txt'));
 }
 
 // Run the main asyn function
@@ -94,3 +97,7 @@ main()
     console.error('Err', err);
     process.exit(1);
   });
+
+
+
+
