@@ -1,8 +1,8 @@
 {
-  "name": "cv-bug-free-carnival",
-  "short_name": "cv-bug-free-carnival",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Christoph Stach: Frontend Engineer - Web Developer - Software Engineer - Full Stack Developer",
+  "short_name": "Christoph Stach",
+  "theme_color": "#00BCD4",
+  "background_color": "#FFFFFF",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
