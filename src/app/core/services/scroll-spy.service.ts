@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/fromEvent';
-import 'rxjs/add/observable/empty';
-import 'rxjs/add/operator/publish';
+import { fromEvent, Observable } from 'rxjs';
+import { publish } from 'rxjs/operators';
+import { EMPTY } from 'rxjs/internal/observable/empty';
+import { ConnectableObservable } from 'rxjs/internal/observable/ConnectableObservable';
+
 
 @Injectable()
 export class ScrollSpyService {
@@ -12,11 +13,11 @@ export class ScrollSpyService {
 
   constructor() {
     if (typeof window !== 'undefined') {
-      this.windowScroll$ = Observable.fromEvent(window, 'scroll');
+      this.windowScroll$ = fromEvent(window, 'scroll');
       this.scrollSpy$ = Observable.create((observer) => {
         this.windowScroll$.subscribe((event: Event) => {
           const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-          const result = { ...this.scrollSpies };
+          const result = {...this.scrollSpies};
           const keys = Object.keys(this.scrollSpies);
 
           keys.forEach((key) => {
@@ -46,11 +47,13 @@ export class ScrollSpyService {
         });
       });
     } else {
-      this.windowScroll$ = Observable.empty();
-      this.scrollSpy$ = Observable.empty();
+      this.windowScroll$ = EMPTY;
+      this.scrollSpy$ = EMPTY;
     }
 
-    this.scrollSpy$.publish().connect();
+    (this.scrollSpy$.pipe(
+      publish()
+    ) as ConnectableObservable<{ [key: string]: boolean }>).connect();
   }
 
   getWindowScroll(): Observable<Event> {

@@ -1,10 +1,7 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ProgressCircleComponent } from '../../../shared/components/progress-circle/progress-circle.component';
 import { ScrollSpyService } from '../../../core/services/scroll-spy.service';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/take';
-import 'rxjs/add/operator/delay';
+import { delay, filter, take } from 'rxjs/operators';
 
 
 @Component({
@@ -13,8 +10,6 @@ import 'rxjs/add/operator/delay';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  private animationClass = 'fadeIn';
-
   @ViewChild('headline') headline: ElementRef;
   @ViewChildren(ProgressCircleComponent) circles: QueryList<ProgressCircleComponent>;
 
@@ -22,15 +17,14 @@ export class SkillsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getScrollSpy()
-      .filter((data) => data['skills'])
-      .take(1)
-      .delay(1000)
-      .subscribe(() => {
-        this.circles.forEach((circle) => {
-          circle.animate();
-        });
+    this.scrollSpyService.getScrollSpy().pipe(
+      filter((data) => data['skills']),
+      take(1),
+      delay(1000)
+    ).subscribe(() => {
+      this.circles.forEach((circle) => {
+        circle.animate();
       });
+    });
   }
-
 }

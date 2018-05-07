@@ -2,10 +2,7 @@ import * as moment from 'moment';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { educationalBackground } from '../../../core/store/init/educational-background.data';
 import { ScrollSpyService } from '../../../core/services/scroll-spy.service';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/filter';
-import 'rxjs/add/operator/take';
-import 'rxjs/add/operator/delay';
+import { delay, filter, take } from 'rxjs/operators';
 
 
 @Component({
@@ -25,12 +22,12 @@ export class EducationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollSpyService.getScrollSpy()
-      .filter((data) => data['education'])
-      .take(1)
-      .delay(1000)
-      .subscribe(() => {
-      });
+    this.scrollSpyService.getScrollSpy().pipe(
+      filter((data) => data['education']),
+      take(1),
+      delay(1000),
+    ).subscribe(() => {
+    });
   }
 
   dateFormat(date: Date | string, format: string) {
