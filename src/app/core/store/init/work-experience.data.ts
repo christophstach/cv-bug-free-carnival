@@ -6,8 +6,8 @@ export const workExperience = [
     startDate: new Date(2016, 11),
     endDate: 'present',
     responsibilities: [
-      'Extending the existing frontend of a web based software based on AngularJS',
-      'Developing a PHP Symfony framework middleware to connect the AngularJS frontend with the systems core REST API'
+      'Extending the existing frontend of a web based software based on Angular (v2+)',
+      'Developing a PHP Symfony framework middleware to connect the AngularJS (v1) frontend with the systems core REST API'
     ],
     technologies: [
       'Angular',
