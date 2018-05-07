@@ -7,9 +7,8 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "build:firebase-functions": "ng build --app=firebase-functions",
-    "build:ngsw.json": "./node_modules/.bin/ngsw-config dist src/ngsw-config.json",
     "build:prerender": "node ./prerender.js",
-    "deploy": "npm run build && npm run build:prerender && npm run build:ngsw.json && firebase deploy",
+    "deploy": "npm run build && npm run build:prerender && firebase deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -25,6 +24,7 @@
     "@angular/platform-browser": "6.0.0",
     "@angular/platform-browser-dynamic": "6.0.0",
     "@angular/platform-server": "6.0.0",
+    "@angular/pwa": "^0.6.0",
     "@angular/router": "6.0.0",
     "@angular/service-worker": "6.0.0",
     "animate.css": "^3.6.1",
