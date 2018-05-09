@@ -3,6 +3,7 @@ import { fromEvent, Observable } from 'rxjs';
 import { publish } from 'rxjs/operators';
 import { EMPTY } from 'rxjs/internal/observable/empty';
 import { ConnectableObservable } from 'rxjs/internal/observable/ConnectableObservable';
+import { current } from 'codelyzer/util/syntaxKind';
 
 
 @Injectable()
