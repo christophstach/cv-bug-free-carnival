@@ -13,6 +13,8 @@ export class SkillsComponent implements OnInit {
   @ViewChild('headline') headline: ElementRef;
   @ViewChildren(ProgressCircleComponent) circles: QueryList<ProgressCircleComponent>;
 
+  private delay = 100;
+
   constructor(private scrollSpyService: ScrollSpyService) {
   }
 
@@ -20,7 +22,7 @@ export class SkillsComponent implements OnInit {
     this.scrollSpyService.getScrollSpy().pipe(
       filter((data) => data['skills']),
       take(1),
-      delay(1000)
+      delay(this.delay)
     ).subscribe(() => {
       this.circles.forEach((circle) => {
         circle.animate();

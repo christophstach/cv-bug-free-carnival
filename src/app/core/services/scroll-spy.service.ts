@@ -3,13 +3,12 @@ import { fromEvent, Observable } from 'rxjs';
 import { publish } from 'rxjs/operators';
 import { EMPTY } from 'rxjs/internal/observable/empty';
 import { ConnectableObservable } from 'rxjs/internal/observable/ConnectableObservable';
-import { current } from 'codelyzer/util/syntaxKind';
 
 
 @Injectable()
 export class ScrollSpyService {
-  private scrollSpy$: Observable<{ [key: string]: boolean }>;
-  private windowScroll$: Observable<Event>;
+  private readonly scrollSpy$: Observable<{ [key: string]: boolean }>;
+  private readonly windowScroll$: Observable<Event>;
   private scrollSpies: { [key: string]: any } = {};
 
   constructor() {
