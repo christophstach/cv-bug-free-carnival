@@ -78,7 +78,7 @@
             "styles": [
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/animate.css/animate.css",
-              "theme/sphere-bs4/assets/css/styles.css",
+              "theme/sphere-bs4/assets/css/theme-1.css",
               "src/styles.scss"
             ],
             "assets": [
