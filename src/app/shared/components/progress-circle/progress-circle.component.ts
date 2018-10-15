@@ -104,10 +104,7 @@ declare interface ProgressBarOptions {
   styleUrls: ['./progress-circle.component.scss']
 })
 export class ProgressCircleComponent implements OnInit {
-  private circle: any;
   @ViewChild('container') container: ElementRef;
-
-
   @Input() options: ProgressBarOptions = {
     duration: 1200,
     strokeWidth: 5,
@@ -141,9 +138,9 @@ export class ProgressCircleComponent implements OnInit {
       }
     }
   };
-
   @Input() value = 0;
   @Input() label: string = null;
+  private circle: any;
 
   ngOnInit() {
     if (typeof window !== 'undefined') {

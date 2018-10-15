@@ -1,4 +1,5 @@
-import { Directive, HostListener, Input } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Directive, HostListener, Inject, Input, PLATFORM_ID } from '@angular/core';
 
 @Directive({
   selector: '[appSmoothScroll]'
@@ -7,9 +8,12 @@ export class SmoothScrollDirective {
   @Input() appSmoothScroll: string;
   @Input() appSmoothScrollOffset = 55;
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  }
+
   @HostListener('click', ['$event'])
   onClick(event) {
-    if (typeof window !== 'undefined') {
+    if (isPlatformBrowser(this.platformId)) {
       event.preventDefault();
 
       if (this.appSmoothScroll !== '#') {
@@ -30,9 +34,11 @@ export class SmoothScrollDirective {
   }
 
   private scroll(value: number) {
-    window.scroll({
-      top: value,
-      behavior: 'smooth'
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      window.scroll({
+        top: value,
+        behavior: 'smooth'
+      });
+    }
   }
 }

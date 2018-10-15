@@ -1,23 +1,26 @@
-import { Injectable } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { fromEvent, Observable } from 'rxjs';
-import { publish } from 'rxjs/operators';
-import { EMPTY } from 'rxjs/internal/observable/empty';
 import { ConnectableObservable } from 'rxjs/internal/observable/ConnectableObservable';
+import { EMPTY } from 'rxjs/internal/observable/empty';
+import { publish } from 'rxjs/operators';
 
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ScrollSpyService {
   private readonly scrollSpy$: Observable<{ [key: string]: boolean }>;
   private readonly windowScroll$: Observable<Event>;
   private scrollSpies: { [key: string]: any } = {};
 
-  constructor() {
-    if (typeof window !== 'undefined') {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
       this.windowScroll$ = fromEvent(window, 'scroll');
       this.scrollSpy$ = Observable.create((observer) => {
         this.windowScroll$.subscribe((event: Event) => {
           const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-          const result = {...this.scrollSpies};
+          const result = { ...this.scrollSpies };
           const keys = Object.keys(this.scrollSpies);
 
           keys.forEach((key) => {
@@ -65,13 +68,15 @@ export class ScrollSpyService {
   }
 
   reset(offset = 260) {
-    const scrollSpies = document.querySelectorAll('[data-scroll-spy]');
+    if (isPlatformBrowser(this.platformId)) {
+      const scrollSpies = document.querySelectorAll('[data-scroll-spy]');
 
-    Array.prototype.forEach.call(scrollSpies, (e) => {
-      this.scrollSpies[e.getAttribute('data-scroll-spy')] = e.offsetTop - offset;
-    });
+      Array.prototype.forEach.call(scrollSpies, (e) => {
+        this.scrollSpies[e.getAttribute('data-scroll-spy')] = e.offsetTop - offset;
+      });
 
-    window.scrollBy(0, 1);
-    window.scrollBy(0, -1);
+      window.scrollBy(0, 1);
+      window.scrollBy(0, -1);
+    }
   }
 }
