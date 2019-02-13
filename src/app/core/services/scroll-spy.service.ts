@@ -17,7 +17,7 @@ export class ScrollSpyService {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
       this.windowScroll$ = fromEvent(window, 'scroll');
-      this.scrollSpy$ = Observable.create((observer) => {
+      this.scrollSpy$ = new Observable((observer) => {
         this.windowScroll$.subscribe((event: Event) => {
           const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
           const result = { ...this.scrollSpies };
